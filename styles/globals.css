@@ -197,6 +197,8 @@ a {
   position: relative;
   overflow: hidden;
   display: inline-block;
+  display: flex;
+  justify-content: center;
 }
 
 .btn {
@@ -226,15 +228,6 @@ a {
   box-shadow: 0 4px 14px 0 rgb(0 118 255 / 39%);
   transition: background 0.2s ease,color 0.2s ease,box-shadow 0.2s ease;
   
-}
-
-.btn:hover{
-  background: rgba(0,118,255,0.9);
-  box-shadow: 0 6px 20px rgb(0 118 255 / 23%);
-}
-.upload_btn_wrapper:hover{
-  background: rgba(0,118,255,0.9);
-  box-shadow: 0 6px 20px rgb(0 118 255 / 23%);
 }
 
   
@@ -298,7 +291,7 @@ img[src=""] {
   float:left;
   min-width:1%;
   height:100%;
-  background:cornflowerblue;
+ 
 }
 
 .percent {
@@ -318,4 +311,39 @@ img[src=""] {
     color: #9F9F9F;
     font-weight: bold;
 
+  }
+
+
+
+  .loading {
+    height: 0;
+    width: 0;
+    padding: 15px;
+    border: 6px solid #ccc;
+    border-right-color: #888;
+    border-radius: 22px;
+    -webkit-animation: rotate 1s infinite linear;
+    /* left, top and position just for the demo! */
+    position: absolute;
+    left: 50%;
+    top: 50%;
+  }
+  
+  @-webkit-keyframes rotate {
+    /* 100% keyframe for  clockwise. 
+       use 0% instead for anticlockwise */
+    100% {
+      -webkit-transform: rotate(360deg);
+    }
+  }
+
+.color0{
+  background:cornflowerblue;
 }
+
+.color1{
+  background:#e8600a;
+}
+
+
+

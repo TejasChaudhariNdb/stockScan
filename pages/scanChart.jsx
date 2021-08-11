@@ -73,7 +73,7 @@ function scanChart() {
 
         for (let i = 0; i < maxPredictions; i++) {
             const classPrediction =
-                prediction[i].className + " <div class='progress'> <div class='bar' style='width: " + prediction[i].probability.toFixed(2) * 100 +"%'><p class='percent'> " + prediction[i].probability.toFixed(2) * 100 +"%</p> </div></div> ";
+                prediction[i].className + " <div class='progress'> <div class='bar color" + i+"' style='width: " + prediction[i].probability.toFixed(2) * 100 +"%'><p class='percent'> " + prediction[i].probability.toFixed(2) * 100 +"%</p> </div></div> ";
             labelContainer.childNodes[i].innerHTML = classPrediction;
             console.log(classPrediction)
   
@@ -109,7 +109,7 @@ function scanChart() {
   <input type="file" name="myfile" type="file" id="file" onChange={(event)=> onFileSelected(event)} />
 </div>
 
-{loading ? "Loading" : ""}
+{loading ? <><div class="loading"></div>Loading</> : ""}
 
 <div style={{padding:'15px'}}>
 <hr/>
