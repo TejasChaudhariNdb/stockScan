@@ -7,6 +7,17 @@ body {
     Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
 }
 
+body::before {
+  content: "";
+  position: fixed;
+  top: -10px;
+  left: 0;
+  width: 100%;
+  height: 10px;
+  box-shadow: 0px 0 10px rgba(0, 0, 0, 0.8);
+  z-index: 100;
+}
+
 a {
   color: inherit;
   text-decoration: none;
@@ -178,4 +189,133 @@ a {
   .modalContent{
     width: 100%;
   }
+}
+
+
+
+.upload_btn_wrapper {
+  position: relative;
+  overflow: hidden;
+  display: inline-block;
+}
+
+.btn {
+  /*
+  border: 2px solid gray;
+  color: gray;
+  background-color: white;
+  padding: 8px 20px;
+  border-radius: 8px;
+  font-size: 20px;
+  font-weight: bold;
+*/
+
+  
+  display: inline-block;
+  outline: 0;
+  cursor: pointer;
+  border: none;
+  padding: 0 56px;
+  height: 45px;
+  line-height: 45px;
+  border-radius: 7px;
+  background-color: #0070f3;
+  color: white;
+  font-weight: 400;
+  font-size: 16px;
+  box-shadow: 0 4px 14px 0 rgb(0 118 255 / 39%);
+  transition: background 0.2s ease,color 0.2s ease,box-shadow 0.2s ease;
+  
+}
+
+.btn:hover{
+  background: rgba(0,118,255,0.9);
+  box-shadow: 0 6px 20px rgb(0 118 255 / 23%);
+}
+.upload_btn_wrapper:hover{
+  background: rgba(0,118,255,0.9);
+  box-shadow: 0 6px 20px rgb(0 118 255 / 23%);
+}
+
+  
+
+.upload_btn_wrapper input[type=file] {
+  font-size: 100px;
+  position: absolute;
+  left: 0;
+  top: 0;
+  opacity: 0;
+}
+
+.dis_img{
+  height: 11rem;
+  border-radius: 8px;
+
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  padding: 5px;
+
+  max-width: 100%;
+  height: auto;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+img[src=""] {
+  display: none;
+}
+
+
+
+
+.result_card{
+
+
+  margin: 1rem;
+  flex-basis: 45%;
+  padding: 1.2rem;
+  color: inherit;
+  text-decoration: none;
+  border: 1px solid #eaeaea;
+  border-radius: 10px;
+
+  box-shadow: 0 6.4px 14.4px 0 rgb(0 0 0 / 13%), 0 1.2px 3.6px 0 rgb(0 0 0 / 11%);
+}
+
+
+
+.progress {
+  margin:20px auto;
+  padding:0;
+  width:90%;
+  height:30px;
+  overflow:hidden;
+  background:#e5e5e5;
+  border-radius:6px;
+}
+
+.bar {
+	position:relative;
+  float:left;
+  min-width:1%;
+  height:100%;
+  background:cornflowerblue;
+}
+
+.percent {
+	position:absolute;
+  top:50%;
+  left:50%;
+  transform:translate(-50%,-50%);
+  margin:0;
+  font-family:tahoma,arial,helvetica;
+  font-size:12px;
+  color:white;
+  
+}
+
+.output{
+  text-align: center;
+    color: #9F9F9F;
+    font-weight: bold;
+
 }

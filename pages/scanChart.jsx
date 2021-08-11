@@ -3,6 +3,7 @@ import Head from 'next/head'
 
 
 
+
 function scanChart() {
 
 
@@ -38,10 +39,7 @@ function scanChart() {
         const metadataURL = URL + "metadata.json";
         console.log(modelURL)
         setLoad(true)
-        // load the model and metadata
-        // Refer to tmImage.loadFromFiles() in the API to support files from a file picker
-        // or files from your local hard drive
-        // Note: the pose library adds "tmImage" object to your window (window.tmImage)
+
         model = await tmImage.load(modelURL, metadataURL);
         maxPredictions = model.getTotalClasses();
 
@@ -60,14 +58,22 @@ function scanChart() {
     }
 
     // run the webcam image through the image model
+  
+
     async function predict() {
         // predict can take in an image, video or canvas html element
         // const prediction = await model.predict(webcam.canvas);
      
         const prediction = await model.predict(document.getElementById("myimage"));
+        console.log(prediction)
+
+        prediction.sort((a, b) => parseFloat(b.probability) - parseFloat(a.probability));
+
+        console.log(prediction)
+
         for (let i = 0; i < maxPredictions; i++) {
             const classPrediction =
-                prediction[i].className + ": " + prediction[i].probability.toFixed(2) * 100 +"%";
+                prediction[i].className + " <div class='progress'> <div class='bar' style='width: " + prediction[i].probability.toFixed(2) * 100 +"%'><p class='percent'> " + prediction[i].probability.toFixed(2) * 100 +"%</p> </div></div> ";
             labelContainer.childNodes[i].innerHTML = classPrediction;
             console.log(classPrediction)
   
@@ -89,19 +95,39 @@ function scanChart() {
 <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@1.3.1/dist/tf.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/@teachablemachine/image@0.8/dist/teachablemachine-image.min.js"></script>
       </Head>            
-<lable htmlFor="file">Select Chart </lable>
-            <input type="file" id="file" onChange={(event)=> onFileSelected(event)}/>
+      
 <br/>
-<img src="" alt="Img will here" id="myimage" height="150" width="auto"/>
+
+<div style={{display:'flex',justifyContent:'center',padding:'10px'}}>
+
+<img src="" alt="Img will here" id="myimage"  width="auto" className="dis_img"/>
+</div>
 <br/>
-<button type="button" onClick={()=>init()}>Search</button>
-{loading ? "Loading" : "NO"}
-<div id="webcam-container"></div>
+
+<div className="upload_btn_wrapper">
+  <button className="btn">Upload Chart</button>
+  <input type="file" name="myfile" type="file" id="file" onChange={(event)=> onFileSelected(event)} />
+</div>
+
+{loading ? "Loading" : ""}
+
+<div style={{padding:'15px'}}>
+<hr/>
+</div>
+<div style={{display:'flex',justifyContent:'center'}}>
+<button className="button_61"  type="button" onClick={()=>init()}>Scan Chart</button>
+</div>
+
+
+<div className="result_card">
+<p className="output">Output</p>
 <div id="label-container"></div>
 
+
+</div>
 
         </div>
     )
 }
 
-export default scanChart
+export default scanChart;
