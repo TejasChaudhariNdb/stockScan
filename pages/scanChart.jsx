@@ -11,6 +11,10 @@ function scanChart() {
 
     
     function onFileSelected(event) {
+      
+      try{
+
+      
         var selectedFile = event.target.files[0];
         var reader = new FileReader();
       
@@ -22,7 +26,9 @@ function scanChart() {
         };
       
         reader.readAsDataURL(selectedFile);
-         
+    }catch(e){
+        console.log(e)
+    }   
     }
 
 
@@ -83,10 +89,16 @@ function scanChart() {
     }
 
 
+React.useEffect(() => {
+    
+    
+    init()
 
+}, [])
+    
     return (
         <div>
-   <Head>
+ <Head>
         <title>Learn Technical And Fundelmental</title>
         <link rel="icon" href="/favicon.ico" />
 
@@ -95,7 +107,6 @@ function scanChart() {
 <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@1.3.1/dist/tf.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/@teachablemachine/image@0.8/dist/teachablemachine-image.min.js"></script>
       </Head>            
-      
 <br/>
 
 <div style={{display:'flex',justifyContent:'center',padding:'10px'}}>
@@ -104,17 +115,19 @@ function scanChart() {
 </div>
 <br/>
 
-<div className="upload_btn_wrapper">
-  <button className="btn">Upload Chart</button>
-  <input type="file" name="myfile" type="file" id="file" onChange={(event)=> onFileSelected(event)} />
-</div>
-
 {loading ? <><div class="loading"></div>Loading</> : ""}
 
 <div style={{padding:'15px'}}>
 <hr/>
 </div>
-<div style={{display:'flex',justifyContent:'center'}}>
+<div style={{display:'flex',justifyContent:'space-evenly'}}>
+
+
+<div className="upload_btn_wrapper">
+  <button className="btn">Upload Chart</button>
+  <input type="file" name="myfile" type="file" id="file" onChange={(event)=> onFileSelected(event)} />
+</div>
+
 <button className="button_61"  type="button" onClick={()=>init()}>Scan Chart</button>
 </div>
 

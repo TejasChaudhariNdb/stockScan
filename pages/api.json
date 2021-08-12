@@ -1,43 +1,44 @@
 [
-{
-"id":1,
-    "name":"Head And Sholders ",
-"img":"https://s3.tradingview.com/s/S9AH2Qrt_mid.png",
-"info":"Best hjas fjslzxc"
-},
-{
-    "id":2,
-    "name":"inverse Head And Sholders",
-    "img":"https://a.c-dn.net/b/2z0Qyo/head-and-shoulders-pattern_body_FXTRADE.png.full.png",
-    "info":"Best hjas fjslzxc"
-    }
-,
-{
-    "id":3,
-    "name":"Double Top",
-    "img":"https://www.adigitalblogger.com/wp-content/uploads/e4b86bab9f8a84d493354596c58434db-compressed.jpg",
-    "info":"A double top is an extremely bearish technical reversal pattern that forms after an asset reaches a high price two consecutive times with a moderate decline between the two highs. It is confirmed once the asset's price falls below a support level equal to the low between the two prior highs."
-    }
-,
-{
-    "id":4,
-    "name":"Double bottom",
-    "img":"https://i2.wp.com/www.stockmaniacs.net/wp-content/uploads/2018/06/Double-bottom-pic.jpg?fit=1200%2C675&ssl=1",
-    "info":"A double bottom will typically indicate a bullish reversal which provides an opportunity for investors to obtain profits from a bullish rally."
-    }
-,
-{
-    "id":5,
-    "name":"Falling Wedge",
-    "img":"https://d364wuh8hyfjvy.cloudfront.net/public/images/2a1a77df358345de8ced8d83618bab10.jpeg",
-    "info":"The Falling Wedge is a bullish pattern that begins wide at the top and contracts as prices move lower. This price action forms a cone that slopes down as the reaction highs and reaction lows converge. In contrast to symmetrical triangles, which have no definitive slope and no bias, falling wedges definitely slope down and have a bullish bias. However, this bullish bias cannot be realized until a resistance breakout occurs. "
-    }
-,
-{
-    "id":6,
-    "name":"Cup and Handle",
-    "img":"https://d364wuh8hyfjvy.cloudfront.net/public/images/2a1a77df358345de8ced8d83618bab10.jpeg",
-    "info":"The Falling Wedge is a bullish pattern that begins wide at the top and contracts as prices move lower. This price action forms a cone that slopes down as the reaction highs and reaction lows converge. In contrast to symmetrical triangles, which have no definitive slope and no bias, falling wedges definitely slope down and have a bullish bias. However, this bullish bias cannot be realized until a resistance breakout occurs. "
-    }
-
+  {
+    "id": 1,
+    "name": "Head And Sholders ",
+    "img": "https://s3.tradingview.com/s/S9AH2Qrt_mid.png",
+    "info": "Head and Shoulders formation consists of a left shoulder, a head, and a right shoulder and a line drawn as the neckline. The left shoulder is formed at the end of an extensive move during which volume is noticeably high. After the peak of the left shoulder is formed, there is a subsequent reaction and prices slide down up to a certain extent which generally occurs on low volume. The prices rally up to form the head with normal or heavy volume and subsequent reaction downward is accompanied with lesser volume. The right shoulder is formed when prices move up again but remain below the central peak called the Head and fall down nearly equal to the first valley between the left shoulder and the head or at least below the peak of the left shoulder. Volume is lesser in the right shoulder formation compared to the left shoulder and the head formation.",
+    "trend": "Bearish trend"
+  },
+  {
+    "id": 2,
+    "name": "inverse Head And Sholders",
+    "img": "https://a.c-dn.net/b/2z0Qyo/head-and-shoulders-pattern_body_FXTRADE.png.full.png",
+    "info": "Best hjas fjslzxc",
+    "trend": "Bullish trend"
+  },
+  {
+    "id": 3,
+    "name": "Double Top",
+    "img": "https://www.adigitalblogger.com/wp-content/uploads/e4b86bab9f8a84d493354596c58434db-compressed.jpg",
+    "info": "A double top is an extremely bearish technical reversal pattern that forms after an asset reaches a high price two consecutive times with a moderate decline between the two highs. It is confirmed once the asset's price falls below a support level equal to the low between the two prior highs.",
+    "trend": "Bearish trend"
+  },
+  {
+    "id": 4,
+    "name": "Double bottom",
+    "img": "https://i2.wp.com/www.stockmaniacs.net/wp-content/uploads/2018/06/Double-bottom-pic.jpg?fit=1200%2C675&ssl=1",
+    "info": "A double bottom will typically indicate a bullish reversal which provides an opportunity for investors to obtain profits from a bullish rally.",
+    "trend": "Bullish trend"
+  },
+  {
+    "id": 5,
+    "name": "Falling Wedge",
+    "img": "https://d364wuh8hyfjvy.cloudfront.net/public/images/2a1a77df358345de8ced8d83618bab10.jpeg",
+    "info": "The Falling Wedge is a bullish pattern that begins wide at the top and contracts as prices move lower. This price action forms a cone that slopes down as the reaction highs and reaction lows converge. In contrast to symmetrical triangles, which have no definitive slope and no bias, falling wedges definitely slope down and have a bullish bias. However, this bullish bias cannot be realized until a resistance breakout occurs. ",
+    "trend": "Bullish trend"
+  },
+  {
+    "id": 6,
+    "name": "Cup and Handle",
+    "img": "https://d364wuh8hyfjvy.cloudfront.net/public/images/2a1a77df358345de8ced8d83618bab10.jpeg",
+    "info": "The Falling Wedge is a bullish pattern that begins wide at the top and contracts as prices move lower. This price action forms a cone that slopes down as the reaction highs and reaction lows converge. In contrast to symmetrical triangles, which have no definitive slope and no bias, falling wedges definitely slope down and have a bullish bias. However, this bullish bias cannot be realized until a resistance breakout occurs. ",
+    "trend": "Bullish trend"
+  }
 ]
