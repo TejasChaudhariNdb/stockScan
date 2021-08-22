@@ -22,10 +22,11 @@ export default function Home() {
 </div>
 </Link>
 
+<Link href="candlePattern">
 <div className={styles.card}>
 <p>Candelstick </p>
 </div>
-
+</Link>
 </div>
 
 <h2>Tasks To DO </h2>

@@ -65,10 +65,16 @@ return d.name.toLowerCase().search(value)    != -1;
     return (
         <div>
 
+
 <div>
-<input placeholder="Search Chart"  value={search} onChange={(e)=> handleSearch(e)} />
+  <nav className="search_nav">
+<input placeholder="Search Chart Pattern" className="input" value={search} onChange={(e)=> handleSearch(e)} />
+ </nav>
  </div> 
 
+
+ 
+<div style={{ paddingTop: '3rem'}}>
             Chart
            {filter.map((chart,index) =>(
 
@@ -83,7 +89,8 @@ return d.name.toLowerCase().search(value)    != -1;
 </div>
 
            ))} 
-            
+
+           </div> 
             
 
 
